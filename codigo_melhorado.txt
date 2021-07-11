@@ -1,0 +1,23 @@
+
+const crazyArray = [true, 869, 'oi', 71, false, 83, '35', true, 397, 'js', false]
+
+let numberAmount = 0 
+let booleanAmount = 0 
+let stringAmount = 0 
+
+for(i= 0; i< crazyArray.length; i++){
+
+const typeOfItem = typeof crazyArray[i]
+const isItemAnumber = typeOfItem === 'number'
+const isItemAboolean = typeOfItem === 'boolean'
+
+  if(isItemAnumber){
+    numberAmount++
+  }else if (isItemAboolean){
+   booleanAmount++
+  }else {
+    stringAmount++
+  }
+}
+
+console.log(`O crazyArray tem ${booleanAmount} booleans, ${numberAmount} números e ${stringAmount} strings.`)
